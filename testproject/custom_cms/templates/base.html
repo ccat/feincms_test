@@ -1,0 +1,21 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load feincms_tags %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ request.current_page.get_title }}</title>
+  </head>
+  <body>
+    <div>
+    {% feincms_render_region feincms_page "sidebar" request %}
+    </div>
+    <div>
+    {% feincms_render_region feincms_page "main" request %}
+    </div>
+  </body>
+</html>
+
+
+
